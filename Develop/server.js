@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // TODO: Static Middleware
-app.use(express.static('./Develop/public'));
+app.use(express.static('./public'));
 
 // TODO: "GET" request | Populate the saved notes from JSON file 
 app.get('/api/notes', (req, res) => {
