@@ -1,6 +1,6 @@
 // TODO: Dependencies
 const express = require('express');
-const fs = requre('fs');
+const fs = require('fs');
 const path = require('path');
 const notes = require('./db/db.json');
 
@@ -19,7 +19,7 @@ app.use(express.static('./Develop/public'));
 
 // TODO: "GET" request | Populate the saved notes from JSON file 
 app.get('/api/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, '/db/db.json'))
+    res.sendFile(path.join(__dirname, "./db/db.json"))
 });
 
 
@@ -39,7 +39,18 @@ app.post('/api/notes', (req, res) => {
 
 
 // TODO: HTML Routes
+app.get('/notes', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/notes.html'));
+});
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+// If no matching route is found, default home page
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, "./'public/index.html"));
+});
 
 
 // TODO: Listening 
