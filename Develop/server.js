@@ -24,7 +24,14 @@ app.get('/api/notes', (req, res) => {
 
 
 // TODO: "POST" request | Post new notes to the JSON file when entered and saved 
-
+app.post('/api/notes', (req, res) => {
+    const notes = JSON.parse(fs.readFileSync('./db/db.json'));
+    const newNotes = req.body;
+    newNotes.id = uuid.v4();
+    notes.push(newNotes);
+    fs.writeFileSync('./db/db/json', JSON.stringify(notes))
+    res.json(notes);
+});
 
 
 // TODO: "DELETE" request | Bonus request 
