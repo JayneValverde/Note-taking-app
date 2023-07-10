@@ -46,8 +46,7 @@ app.delete('/api/notes/:id', (req, res) => {
     // sort through notes file and create a new array minus the note in question
     const newNoteData = notes.filter((note) => note.id !== delNote);
     // send array back to the .db class
-    delNote.push(newNoteData);
-    fs.writeFileSync('./db/db.json', JSON.stringify(notes));
+    fs.writeFileSync('./db/db.json', JSON.stringify(newNoteData));
 
     res.json(newNoteData)
 });
