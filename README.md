@@ -40,16 +40,16 @@ THEN I am presented with empty fields to enter a new note title and the note's t
 ```
 
 ## Screenshots : 
-![Screenshot of landing page](./Develop/images/landing-page.png)
+![Screenshot of landing page](./images/landing-page.png)
 * landing page 
 
-![Screenshot of first note](./Develop/images/note-one.png)
+![Screenshot of first note](./images/note-one.png)
 * First note being initiated 
 
-![Screenshot of list](./Develop/images/note-two.png)
+![Screenshot of list](./images/note-two.png)
 * List of notes posted
 
-![Screenshot of list w/deletion](./Develop/images/note-two-delete.png)
+![Screenshot of list w/deletion](./images/note-two-delete.png)
 * Same list of notes with some deletions 
 
 
