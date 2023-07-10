@@ -38,10 +38,19 @@ app.post('/api/notes', (req, res) => {
 
 
 // TODO: "DELETE" request | Bonus request 
-// app.delete('/api/notes/:id', (req, res) => { 
-//     const notes = JSON.parse(fs.readFileSync('./db/db.json'));
-// })
+app.delete('/api/notes/:id', (req, res) => { 
+    // seperate the note to delete based on ID
+    const delNote = req.params.id;
+    // notes already in json file
+    const notes = JSON.parse(fs.readFileSync('./db/db.json'));
+    // sort through notes file and create a new array minus the note in question
+    const newNoteData = notes.filter((note) => note.id !== delNote);
+    // send array back to the .db class
+    delNote.push(newNoteData);
+    fs.writeFileSync('./db/db.json', JSON.stringify(notes));
 
+    res.json(newNoteData)
+});
 
 // TODO: HTML Routes
 app.get('/notes', (req, res) => {
