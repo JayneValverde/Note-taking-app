@@ -1,4 +1,4 @@
-// TODO: Dependencies
+// Dependencies
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -7,23 +7,22 @@ const path = require('path');
 // Helper method for generating unique id's
 const uuid = require('uuid');
 
-// TODO: Setting up server
+// Setting up server
 const app =  express();
 var PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// TODO: Static Middleware
+// Static Middleware
 app.use(express.static('./public'));
 
-// TODO: "GET" request | Populate the saved notes from JSON file 
+// "GET" request | Populate the saved notes from JSON file 
 app.get('/api/notes', (req, res) => {
     res.sendFile(path.join(__dirname, "./db/db.json"))
 });
 
-
-// TODO: "POST" request | Post new notes to the JSON file when entered and saved 
+// "POST" request | Post new notes to the JSON file when entered and saved 
 app.post('/api/notes', (req, res) => {
     const notes = JSON.parse(fs.readFileSync('./db/db.json'));
     const newNotes = req.body;
@@ -35,8 +34,7 @@ app.post('/api/notes', (req, res) => {
     res.json(notes);
 });
 
-
-// TODO: "DELETE" request | Bonus request 
+// "DELETE" request | Bonus request 
 app.delete('/api/notes/:id', (req, res) => { 
     // seperate the note to delete based on ID
     const delNote = req.params.id;
@@ -50,7 +48,7 @@ app.delete('/api/notes/:id', (req, res) => {
     res.json(newNoteData)
 });
 
-// TODO: HTML Routes
+// HTML Routes
 app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, './public/notes.html'));
 });
@@ -64,8 +62,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, "./'public/index.html"));
 });
 
-
-// TODO: Listening 
+// Listening 
 app.listen(PORT, () => 
     console.log("App listening on PORT " + PORT)
 );
