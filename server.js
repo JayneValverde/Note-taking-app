@@ -2,7 +2,6 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-// const notes = require('./db/db.json');
 
 // Helper method for generating unique id's
 const uuid = require('uuid');
@@ -27,7 +26,6 @@ app.post('/api/notes', (req, res) => {
     const notes = JSON.parse(fs.readFileSync('./db/db.json'));
     const newNotes = req.body;
     newNotes.id = uuid.v4();
-    // notes.id = notes.length = +1
     notes.push(newNotes);
     fs.writeFileSync('./db/db.json', JSON.stringify(notes));
     
