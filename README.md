@@ -4,8 +4,9 @@
 ```
 IMPORTANT: 
 * I was not able to deploy my application with HEROKU 
-* We, as students, were supposed to recieve a certain amount of credits by connecting with our student profiles in GITHUB. 
-*Unforuntatly I never signed up for the 'STUDENT STATUS' through GITHUB and it is taking longer than anticipated to get verified as a student through HEROKU's website. 
+* As students, were supposed to recieve credits by connecting with our student profiles in GITHUB. 
+* Unforuntatly I never signed up for the 'STUDENT STATUS' through GITHUB. 
+* It is taking longer than anticipated to get verified as a student through HEROKU's website. 
 * As soon as verification goes through, I will deploy the site and this repository.  
 ```
 
