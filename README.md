@@ -3,12 +3,18 @@
 
 ```
 IMPORTANT: 
-* I was not able to deploy my application with HEROKU 
-* As students, were supposed to recieve credits by connecting with our student profiles in GITHUB. 
-* Unforuntatly I never signed up for the 'STUDENT STATUS' through GITHUB. 
-* It is taking longer than anticipated to get verified as a student through HEROKU's website. 
-* As soon as verification goes through, I will deploy the site and this repository.  
+
+- Updated link below with deployed applicaiton
+
+APPLICATION USAGE 
+
+- Selecte the '+' sign on the top right hand corner to add a 'New Note'
+- Type in the header first 'Title of Note' 
+- Type you note in the body second 'Contents of Note' 
+- The SAVE button should appear on top once there is text added to the body. 
+
 ```
+## ***[Deployed applicaiton w/ Heroku!!!](https://note-taking-app-jv-aaa688d69215.herokuapp.com/notes)*** 
 
 ## Description : 
 ***Express.js*** <br>
